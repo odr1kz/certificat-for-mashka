@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Сертифікат для Марії ❤️</title>
+
+    <style>
+
+        /* =====================================================
+           ОСНОВА
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --red: #a30018;
+            --dark-red: #69000f;
+            --burgundy: #4b0714;
+            --burgundy-2: #720d22;
+            --wine: #5b0a19;
+            --white: #fff;
+        }
+
+        body {
+            min-height: 100vh;
+
+            font-family:
+                "Segoe UI",
+                Arial,
+                sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at 20% 10%,
+                    rgba(255,255,255,.12),
+                    transparent 25%
+                ),
+
+                radial-gradient(
+                    circle at 80% 90%,
+                    rgba(255,255,255,.10),
+                    transparent 25%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #3b0610 0%,
+                    #620914 25%,
+                    #8e1026 50%,
+                    #570813 75%,
+                    #35040d 100%
+                );
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 40px 20px;
+
+            overflow: hidden;
+
+            color: #5d0714;
+        }
+
+
+        /* =====================================================
+           ФОНОВИЙ ШАР
+        ===================================================== */
+
+        #background-hearts {
+            position: fixed;
+
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            overflow: hidden;
+
+            pointer-events: none;
+
+            z-index: 1;
+        }
+
+
+        /* =====================================================
+           БІЛІ СЕРДЕЧКА НА ФОНІ
+        ===================================================== */
+
+        .background-heart {
+            position: absolute;
+
+            color: white;
+
+            text-shadow:
+                0 0 8px rgba(255,255,255,.8),
+                0 0 20px rgba(255,255,255,.45);
+
+            opacity: 0;
+
+            animation:
+                backgroundFloat
+                linear
+                infinite;
+        }
+
+
+        @keyframes backgroundFloat {
+
+            0% {
+                transform:
+                    translateY(110vh)
+                    rotate(0deg)
+                    scale(.7);
+
+                opacity: 0;
+            }
+
+            10% {
+                opacity: .25;
+            }
+
+            50% {
+                opacity: .75;
+            }
+
+            90% {
+                opacity: .3;
+            }
+
+            100% {
+                transform:
+                    translateY(-20vh)
+                    rotate(360deg)
+                    scale(1.2);
+
+                opacity: 0;
+            }
+        }
+
+
+        /* =====================================================
+           БЛИСКІТКИ
+        ===================================================== */
+
+        #sparkles {
+            position: fixed;
+
+            inset: 0;
+
+            pointer-events: none;
+
+            z-index: 2;
+        }
+
+
+        .sparkle {
+            position: absolute;
+
+            color: rgba(255,255,255,.8);
+
+            animation:
+                sparkleAnimation
+                ease-in-out
+                infinite;
+
+            opacity: 0;
+        }
+
+
+        @keyframes sparkleAnimation {
+
+            0%, 100% {
+                opacity: 0;
+                transform: scale(.4) rotate(0deg);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.2) rotate(180deg);
+            }
+        }
+
+
+        /* =====================================================
+           СЕРТИФІКАТ
+        ===================================================== */
+
+        .certificate {
+
+            position: relative;
+
+            z-index: 10;
+
+            width: min(1200px, 94vw);
+
+            min-height: 620px;
+
+            padding:
+                65px
+                80px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fffafa 0%,
+                    #ffffff 50%,
+                    #fff4f5 100%
+                );
+
+            border-radius: 32px;
+
+            border:
+                4px solid rgba(255,255,255,.95);
+
+            box-shadow:
+
+                0 45px 100px
+                rgba(0,0,0,.48),
+
+                0 0 0 8px
+                rgba(120,0,20,.35),
+
+                inset 0 0 40px
+                rgba(130,0,20,.06);
+
+            animation:
+                certificateAppear
+                1.2s
+                cubic-bezier(.2,.8,.2,1);
+        }
+
+
+        @keyframes certificateAppear {
+
+            from {
+                opacity: 0;
+
+                transform:
+                    translateY(50px)
+                    scale(.88);
+            }
+
+            to {
+                opacity: 1;
+
+                transform:
+                    translateY(0)
+                    scale(1);
+            }
+        }
+
+
+        /* =====================================================
+           ВНУТРІШНЯ БОРДОВА РАМКА
+        ===================================================== */
+
+        .certificate::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 18px;
+
+            border:
+                2px solid
+                rgba(105,0,20,.75);
+
+            border-radius: 22px;
+
+            pointer-events: none;
+        }
+
+
+        .certificate::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 28px;
+
+            border:
+                1px solid
+                rgba(160,0,30,.25);
+
+            border-radius: 18px;
+
+            pointer-events: none;
+        }
+
+
+        /* =====================================================
+           ДЕКОРАТИВНІ КУТИ
+        ===================================================== */
+
+        .corner {
+
+            position: absolute;
+
+            z-index: 15;
+
+            color: var(--burgundy);
+
+            font-size: 45px;
+
+            text-shadow:
+                0 2px 4px rgba(80,0,15,.15);
+        }
+
+
+        .top-left {
+            top: 30px;
+            left: 38px;
+        }
+
+        .top-right {
+            top: 30px;
+            right: 38px;
+        }
+
+        .bottom-left {
+            bottom: 30px;
+            left: 38px;
+        }
+
+        .bottom-right {
+            bottom: 30px;
+            right: 38px;
+        }
+
+
+        /* =====================================================
+           ТЕКСТ
+        ===================================================== */
+
+        .mini-title {
+
+            position: relative;
+
+            z-index: 20;
+
+            color: var(--burgundy);
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+            letter-spacing: 7px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+        }
+
+
+        .welcome {
+
+            position: relative;
+
+            z-index: 20;
+
+            color: #8d071e;
+
+            font-size:
+                clamp(
+                    48px,
+                    7vw,
+                    82px
+                );
+
+            font-weight: 900;
+
+            line-height: 1;
+
+            letter-spacing: -2px;
+
+            margin-bottom: 15px;
+
+            text-shadow:
+                0 4px 12px
+                rgba(120,0,20,.12);
+        }
+
+
+        .name {
+
+            position: relative;
+
+            z-index: 20;
+
+            color: var(--burgundy);
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(
+                    31px,
+                    4.5vw,
+                    58px
+                );
+
+            font-weight: 700;
+
+            margin-bottom: 24px;
+        }
+
+
+        .line {
+
+            position: relative;
+
+            z-index: 20;
+
+            width: 300px;
+
+            height: 3px;
+
+            margin-bottom: 25px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    #790b1d,
+                    #b00025,
+                    #790b1d,
+                    transparent
+                );
+        }
+
+
+        .subtitle {
+
+            position: relative;
+
+            z-index: 20;
+
+            max-width: 820px;
+
+            color: #4e2630;
+
+            font-size:
+                clamp(
+                    17px,
+                    2vw,
+                    23px
+                );
+
+            line-height: 1.55;
+        }
+
+
+        /* =====================================================
+           ПОДАРУНКОВИЙ БЛОК
+        ===================================================== */
+
+        .gift {
+
+            position: relative;
+
+            z-index: 20;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 18px;
+
+            margin: 28px 0;
+
+            padding:
+                18px
+                40px;
+
+            max-width: 850px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #650816,
+                    #a50020,
+                    #650816
+                );
+
+            color: white;
+
+            border-radius: 100px;
+
+            border:
+                2px solid
+                rgba(255,255,255,.5);
+
+            font-size:
+                clamp(
+                    18px,
+                    2.5vw,
+                    29px
+                );
+
+            font-weight: 800;
+
+            letter-spacing: .5px;
+
+            box-shadow:
+
+                0 15px 35px
+                rgba(90,0,20,.35),
+
+                inset 0 1px
+                rgba(255,255,255,.35);
+
+            transition:
+                transform .3s ease,
+                box-shadow .3s ease;
+        }
+
+
+        .gift:hover {
+
+            transform:
+                translateY(-5px)
+                scale(1.02);
+
+            box-shadow:
+                0 20px 45px
+                rgba(90,0,20,.45);
+        }
+
+
+        .beauty-icons {
+            font-size: 30px;
+        }
+
+
+        /* =====================================================
+           НИЗ
+        ===================================================== */
+
+        .bottom {
+
+            position: relative;
+
+            z-index: 20;
+
+            margin-top: 12px;
+
+            text-align: center;
+        }
+
+
+        .presented {
+
+            color: #6c303b;
+
+            font-size: 14px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 7px;
+        }
+
+
+        .from {
+
+            color: var(--burgundy);
+
+            font-family: Georgia, serif;
+
+            font-size: 23px;
+
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           КНОПКА
+        ===================================================== */
+
+        .gift-button {
+
+            position: relative;
+
+            z-index: 100;
+
+            margin-top: 30px;
+
+            padding:
+                15px
+                35px;
+
+            border:
+                2px solid
+                #760b1b;
+
+            border-radius: 100px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffffff,
+                    #fff6f7
+                );
+
+            color: #760b1b;
+
+            font-size: 17px;
+
+            font-weight: 800;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 8px 25px
+                rgba(80,0,15,.18);
+
+            transition: all .3s ease;
+        }
+
+
+        .gift-button:hover {
+
+            transform:
+                translateY(-4px)
+                scale(1.04);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #720817,
+                    #a90022
+                );
+
+            color: white;
+
+            box-shadow:
+                0 15px 35px
+                rgba(100,0,20,.35);
+        }
+
+
+        /* =====================================================
+           🔥 ОКРЕМИЙ ШАР ДЛЯ СЕРДЕЧОК ПРИ НАТИСКАННІ
+           
+           ВАЖЛИВО:
+           z-index: 99999
+           Тому сердечка БУДУТЬ ПОВЕРХ
+           сертифіката, тексту і кнопки.
+        ===================================================== */
+
+        #celebration-layer {
+
+            position: fixed;
+
+            inset: 0;
+
+            width: 100vw;
+            height: 100vh;
+
+            pointer-events: none;
+
+            overflow: visible;
+
+            z-index: 99999;
+        }
+
+
+        .celebration-heart {
+
+            position: absolute;
+
+            bottom: -80px;
+
+            left: 50%;
+
+            font-size: 35px;
+
+            line-height: 1;
+
+            pointer-events: none;
+
+            will-change:
+                transform,
+                opacity;
+
+            animation:
+                celebrationFloat
+                var(--duration)
+                cubic-bezier(.15,.7,.2,1)
+                forwards;
+
+            filter:
+                drop-shadow(
+                    0 4px 8px
+                    rgba(80,0,15,.35)
+                );
+        }
+
+
+        @keyframes celebrationFloat {
+
+            0% {
+
+                opacity: 0;
+
+                transform:
+                    translate3d(
+                        0,
+                        0,
+                        0
+                    )
+                    rotate(0deg)
+                    scale(.5);
+            }
+
+            10% {
+
+                opacity: 1;
+            }
+
+            45% {
+
+                opacity: 1;
+            }
+
+            100% {
+
+                opacity: 0;
+
+                transform:
+                    translate3d(
+                        var(--x),
+                        -115vh,
+                        0
+                    )
+                    rotate(var(--rotation))
+                    scale(var(--scale));
+            }
+        }
+
+
+        /* =====================================================
+           БЛИСКИ ПОВЕРХ СЕРТИФІКАТА ПІСЛЯ КЛІКУ
+        ===================================================== */
+
+        .celebration-spark {
+
+            position: absolute;
+
+            color: white;
+
+            font-size: 25px;
+
+            animation:
+                sparkFly
+                2.5s
+                ease-out
+                forwards;
+
+            filter:
+                drop-shadow(
+                    0 0 8px white
+                );
+        }
+
+
+        @keyframes sparkFly {
+
+            0% {
+
+                opacity: 0;
+
+                transform:
+                    scale(.2)
+                    rotate(0deg);
+            }
+
+            20% {
+
+                opacity: 1;
+            }
+
+            100% {
+
+                opacity: 0;
+
+                transform:
+                    translate(
+                        var(--x),
+                        var(--y)
+                    )
+                    scale(1.5)
+                    rotate(360deg);
+            }
+        }
+
+
+        /* =====================================================
+           МОБІЛЬНА ВЕРСІЯ
+        ===================================================== */
+
+        @media (max-width: 700px) {
+
+            body {
+
+                overflow-y: auto;
+
+                padding:
+                    25px 0;
+            }
+
+
+            .certificate {
+
+                width: 94vw;
+
+                min-height: 620px;
+
+                padding:
+                    60px
+                    24px;
+            }
+
+
+            .certificate::before {
+                inset: 12px;
+            }
+
+
+            .certificate::after {
+                inset: 20px;
+            }
+
+
+            .corner {
+
+                font-size: 27px;
+            }
+
+
+            .top-left,
+            .top-right {
+
+                top: 24px;
+            }
+
+
+            .bottom-left,
+            .bottom-right {
+
+                bottom: 24px;
+            }
+
+
+            .top-left,
+            .bottom-left {
+
+                left: 20px;
+            }
+
+
+            .top-right,
+            .bottom-right {
+
+                right: 20px;
+            }
+
+
+            .mini-title {
+
+                font-size: 10px;
+
+                letter-spacing: 3px;
+            }
+
+
+            .welcome {
+
+                letter-spacing: -1px;
+            }
+
+
+            .gift {
+
+                padding:
+                    15px
+                    20px;
+
+                border-radius: 25px;
+
+                flex-direction: column;
+
+                gap: 5px;
+            }
+
+
+            .beauty-icons {
+
+                font-size: 25px;
+            }
+
+
+            .subtitle {
+
+                font-size: 16px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         ФОНОВІ БІЛІ СЕРДЕЧКА
+    ====================================================== -->
+
+    <div id="background-hearts"></div>
+
+
+    <!-- =====================================================
+         ФОНОВІ БЛИСКІТКИ
+    ====================================================== -->
+
+    <div id="sparkles"></div>
+
+
+    <!-- =====================================================
+         СЕРТИФІКАТ
+    ====================================================== -->
+
+    <section class="certificate">
+
+        <div class="corner top-left">✦</div>
+        <div class="corner top-right">✦</div>
+
+        <div class="corner bottom-left">✦</div>
+        <div class="corner bottom-right">✦</div>
+
+
+        <div class="mini-title">
+            ОФІЦІЙНИЙ СЕРТИФІКАТ
+        </div>
+
+
+        <div class="welcome">
+            ВІТАЄМО!
+        </div>
+
+
+        <div class="name">
+            Марію Лазареску Григорівну ❤️
+        </div>
+
+
+        <div class="line"></div>
+
+
+        <div class="subtitle">
+
+            Урочисто повідомляємо про отримання
+            особливого подарунка, створеного
+            спеціально для найпрекраснішої дівчини.
+
+        </div>
+
+
+        <div class="gift">
+
+            <span class="beauty-icons">
+                👁️ ✨
+            </span>
+
+            СЕРТИФІКАТ НА ВІЇ ТА БРОВИ
+
+            <span class="beauty-icons">
+                ✨ 👁️
+            </span>
+
+        </div>
+
+
+        <div class="subtitle">
+
+            Нехай цей подарунок подарує тобі
+            ще більше краси, впевненості
+            та прекрасного настрою! ❤️
+
+        </div>
+
+
+        <div class="bottom">
+
+            <div class="presented">
+                З найкращими побажаннями
+            </div>
+
+            <div class="from">
+                ♡ Від Вітика ♡
+            </div>
+
+        </div>
+
+
+        <button
+            class="gift-button"
+            onclick="celebrate()">
+
+            🎁 Отримати подарунок
+
+        </button>
+
+    </section>
+
+
+    <!-- =====================================================
+         🔥 ЦЕЙ ШАР ЗАВЖДИ ПОВЕРХ УСЬОГО
+    ====================================================== -->
+
+    <div id="celebration-layer"></div>
+
+
+    <script>
+
+        /* =====================================================
+           БАГАТО БІЛИХ СЕРДЕЧОК НА ФОНІ
+        ===================================================== */
+
+        const background =
+            document.getElementById(
+                "background-hearts"
+            );
+
+
+        const whiteHearts = [
+            "♡",
+            "♡",
+            "♥",
+            "🤍"
+        ];
+
+
+        for (let i = 0; i < 65; i++) {
+
+            const heart =
+                document.createElement("div");
+
+            heart.className =
+                "background-heart";
+
+            heart.innerHTML =
+                whiteHearts[
+                    Math.floor(
+                        Math.random() *
+                        whiteHearts.length
+                    )
+                ];
+
+            heart.style.left =
+                Math.random() * 100 + "%";
+
+            heart.style.fontSize =
+                (12 + Math.random() * 30) + "px";
+
+            heart.style.animationDuration =
+                (7 + Math.random() * 10) + "s";
+
+            heart.style.animationDelay =
+                (-Math.random() * 15) + "s";
+
+            heart.style.opacity =
+                0.2 + Math.random() * .5;
+
+            background.appendChild(heart);
+        }
+
+
+        /* =====================================================
+           БЛИСКІТКИ
+        ====================================================== */
+
+        const sparkles =
+            document.getElementById(
+                "sparkles"
+            );
+
+
+        for (let i = 0; i < 45; i++) {
+
+            const sparkle =
+                document.createElement("div");
+
+            sparkle.className =
+                "sparkle";
+
+            sparkle.innerHTML =
+                Math.random() > .5
+                    ? "✦"
+                    : "·";
+
+            sparkle.style.left =
+                Math.random() * 100 + "%";
+
+            sparkle.style.top =
+                Math.random() * 100 + "%";
+
+            sparkle.style.fontSize =
+                (8 + Math.random() * 18) + "px";
+
+            sparkle.style.animationDuration =
+                (3 + Math.random() * 5) + "s";
+
+            sparkle.style.animationDelay =
+                (-Math.random() * 5) + "s";
+
+            sparkles.appendChild(sparkle);
+        }
+
+
+        /* =====================================================
+           ❤️ ГОЛОВНА АНІМАЦІЯ
+           
+           СЕРДЕЧКА СТВОРЮЮТЬСЯ В #celebration-layer,
+           ЯКИЙ МАЄ Z-INDEX 99999.
+           
+           ТОМУ ВОНИ ГАРАНТОВАНО ПОВЕРХ
+           СЕРТИФІКАТА, ТЕКСТУ І КНОПКИ.
+        ====================================================== */
+
+        function celebrate() {
+
+            const layer =
+                document.getElementById(
+                    "celebration-layer"
+                );
+
+
+            const hearts = [
+                "❤️",
+                "🤍",
+                "💖",
+                "♡",
+                "♥",
+                "💕",
+                "💗",
+                "✨"
+            ];
+
+
+            /* -----------------------------------------------
+               СЕРДЕЧКА
+            ------------------------------------------------ */
+
+            for (let i = 0; i < 100; i++) {
+
+                const heart =
+                    document.createElement("div");
+
+                heart.className =
+                    "celebration-heart";
+
+
+                heart.innerHTML =
+                    hearts[
+                        Math.floor(
+                            Math.random() *
+                            hearts.length
+                        )
+                    ];
+
+
+                /*
+                    Початкова позиція.
+                    Сердечка стартують приблизно
+                    з усієї ширини екрану.
+                */
+
+                heart.style.left =
+                    Math.random() * 100 + "vw";
+
+
+                /*
+                    Наскільки далеко вбік
+                    сердечко буде відлітати.
+                */
+
+                heart.style.setProperty(
+                    "--x",
+                    (
+                        -250 +
+                        Math.random() * 500
+                    ) + "px"
+                );
+
+
+                /*
+                    Різний розмір.
+                */
+
+                heart.style.setProperty(
+                    "--scale",
+                    (
+                        .7 +
+                        Math.random() * 1.5
+                    )
+                );
+
+
+                /*
+                    Різне обертання.
+                */
+
+                heart.style.setProperty(
+                    "--rotation",
+                    (
+                        -360 +
+                        Math.random() * 720
+                    ) + "deg"
+                );
+
+
+                /*
+                    Різна швидкість.
+                */
+
+                heart.style.setProperty(
+                    "--duration",
+                    (
+                        3 +
+                        Math.random() * 3
+                    ) + "s"
+                );
+
+
+                layer.appendChild(heart);
+
+
+                /*
+                    Видаляємо після завершення,
+                    щоб сайт не накопичував елементи.
+                */
+
+                setTimeout(() => {
+
+                    heart.remove();
+
+                }, 7000);
+            }
+
+
+            /* =================================================
+               ✨ ДОДАТКОВІ БЛИСКИ
+            ================================================= */
+
+            for (let i = 0; i < 35; i++) {
+
+                const spark =
+                    document.createElement("div");
+
+                spark.className =
+                    "celebration-spark";
+
+                spark.innerHTML = "✦";
+
+
+                spark.style.left =
+                    (35 + Math.random() * 30) +
+                    "vw";
+
+
+                spark.style.top =
+                    (40 + Math.random() * 20) +
+                    "vh";
+
+
+                spark.style.setProperty(
+                    "--x",
+                    (
+                        -300 +
+                        Math.random() * 600
+                    ) + "px"
+                );
+
+
+                spark.style.setProperty(
+                    "--y",
+                    (
+                        -200 -
+                        Math.random() * 400
+                    ) + "px"
+                );
+
+
+                layer.appendChild(spark);
+
+
+                setTimeout(() => {
+
+                    spark.remove();
+
+                }, 3000);
+            }
+
+
+            /* =================================================
+               ЗМІНА КНОПКИ
+            ================================================= */
+
+            const button =
+                document.querySelector(
+                    ".gift-button"
+                );
+
+
+            button.innerHTML =
+                "❤️ Подарунок отримано! ❤️";
+
+
+            button.style.background =
+                "linear-gradient(135deg, #650816, #a50020)";
+
+
+            button.style.color =
+                "white";
+
+
+            button.style.borderColor =
+                "#650816";
+        }
+
+    </script>
+
+</body>
+</html>
